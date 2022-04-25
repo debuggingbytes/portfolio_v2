@@ -35,7 +35,7 @@
     </section>
     <PortfolioView :portfolio="data.portfolio" />
     <Transition name="fade-scale">
-      <ContactForm v-if="contactVisible"/>
+      <ContactForm v-show="contactVisible" @handleContact="toggleContact"/>
     </Transition>
   </main>
 </template>
@@ -67,7 +67,7 @@ export default {
     ContactForm,
     Bootcamp
   },
-  props: ['stack', 'portfolio', 'courses', 'bootcamp'],
+  props: ['stack', 'portfolio', 'courses', 'bootcamp', 'contactFunction'],
   methods: {
     getYear() {
       const year = new Date();

@@ -18,7 +18,7 @@
       <div class="card__side card__side--back card__side--back--1">
         <div class="card__cta">
           <div class="card__price-box">
-            <h3 class="h2">Stacks</h3>
+            <h3 class="h3">Stacks</h3>
             <div class="card__details">
               <ul>
                 <li v-for="stack in project.details.stacks" :key="stack.name">{{stack}}</li>

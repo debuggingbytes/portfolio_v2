@@ -1,5 +1,5 @@
 <template>
-  <label :for="forLabel" :class="css">{{label}}</label>
+  <label for="{{forLabel}}" :class="css">{{label}}</label>
 </template>
 
 <script>

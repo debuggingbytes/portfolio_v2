@@ -35,7 +35,7 @@
           <li class="nav-link"><a href='' class="nav-link__link">Home</a></li>
           <li class="nav-link"><a href='' class="nav-link__link">ABout</a></li>
           <li class="nav-link"><a href='' class="nav-link__link">Portfolio</a></li>
-          <li class="nav-link"><a href='' class="nav-link__link">resume</a></li>
+          <li class="nav-link"><a href='#resume' @click.prevent="this.$emit('event')" class="nav-link__link">resume</a></li>
         </ul>
       </div>
     </nav>
@@ -46,7 +46,6 @@
 export default {
   data() {
     return {
-      count: 0,
     };
   },
 };

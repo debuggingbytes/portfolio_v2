@@ -1,6 +1,6 @@
 <template>
   <!-- {{message.length}} -->
-  <textarea @keyup="checkText" v-model="message" :class="css" :placeholder="placeholder" required>
+  <textarea @keyup="checkText" v-model="message" :class="css" :placeholder="placeholder" required no-resize>
 
   </textarea>
   <AlertBox css="alert alert-error" :alertMessage="error" v-if="tooLong"/>
@@ -16,23 +16,30 @@ export default {
     return {
       tooLong: false,
       message: '',
-      maxChars: 50,
+      maxChars: this.textMax,
       error: '',
     }
   },
   components: {
     AlertBox
   },
-  props: ['css', 'placeholder', 'alertMessage'],
+  props: {
+    css: {type: String},
+    placeholder: {type: String},
+    alertMessage: {type: String},
+    textMax: {type: Number},
+    forLabel: {type: String},
+  },
   methods: {
     checkText() {
       if(this.message.length > this.maxChars){
         // alert("This is bad")
-        this.error = "You've exceeded the maximum allowed characters, please reduce your message by " + (this.maxChars - this.message.length) + " characters."
+        this.error = "You've exceeded the maximum allowed characters [ "+ this.textMax +" ], please reduce your message by " + (this.maxChars - this.message.length) + " characters."
         this.tooLong = true
       }else{
         this.tooLong = false
       }
+      this.$emit('catchValue', 'message', this.message )
       
     }
   }

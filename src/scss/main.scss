@@ -114,6 +114,10 @@ $default-font: 1.6rem;
 }
 .pb-lg {
   padding-bottom: 6rem;
+
+}
+.pt-xs {
+  padding-top: 1rem;
 }
 .pt-sm {
   padding-top: 2rem;
@@ -124,9 +128,54 @@ $default-font: 1.6rem;
 .pt-lg {
   padding-top: 6rem;
 }
+
+.fw-lg {
+  font-weight: 600;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mb-md {
+  margin-bottom: 4rem;
+}
+.mb-lg {
+  margin-bottom: 6rem;
+}
+.mt-sm {
+  margin-top: 2rem;
+}
+.mt-md {
+  margin-top: 4rem;
+}
+.mt-lg {
+  margin-top: 6rem;
+}
+
+.flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
+
+
+
 .content {
   font-size: $default-font;
   line-height: 2.4rem;
+
+  &-block {
+    display: block;
+  }
+  &-inline {
+    display: inline-block;
+    width: 15%;
+    font-weight: 600;
+  }
+
+
+
 }
 .highlight {
   color: $color-aqua-blue;
@@ -154,7 +203,7 @@ $default-font: 1.6rem;
   }
   &-warn {
     background-image: linear-gradient(to bottom, rgba($color-white, .3) 15%, transparent);
-    background-color: rgb(220, 255, 21);
+    background-color: rgb(255, 239, 21);
   }
   &-success {
     background-image: linear-gradient(to bottom, rgba($color-white, .3) 15%, transparent);
@@ -179,7 +228,7 @@ html {
   font-size: 62.5%; // 1 rem = 10px
 }
 body {
-  font-family: 'Lato', Verdana, sans-serif;
+  font-family: 'Lato', sans-serif;
   color: $color-white;
 }
 
@@ -278,11 +327,15 @@ body {
     list-style-type: none;
     font-size: 1.4rem;
     color: $color-orange;
+    pointer-events: all;
+
   }
   &-link {
     &__link {
       transition: all 0.3s ease-in-out;
       display: inline;
+      text-shadow: 1px 2px 2px rgba($color-black, .9);
+
       &:link,
       &:active,
       &:visited {
@@ -300,6 +353,7 @@ body {
         border-bottom: $color-orange 0.5rem solid;
         background-clip: text;
         transform: translateX(-10%);
+        text-shadow: none;
       }
     }
 
@@ -357,6 +411,37 @@ a {
   }
   &--orange {
     @include gradient-font($color-orange-light, $color-orange-dark);
+    border-bottom: 3px solid $color-orange;
+  }
+  &--orange-nt {
+    // @include gradient-font($color-orange-light, $color-orange-dark);
+    color: $color-orange;
+    text-shadow: 1px 2px 4px rgba($color-black, .5);
+    border-bottom: 3px solid $color-orange;
+  }
+}
+
+.h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+
+  &--blue {
+    @include gradient-font($color-aqua-blue-light, $color-aqua-blue-dark);
+    border-bottom: 3px solid $color-aqua-blue;
+  }
+  &--orange {
+    @include gradient-font($color-orange-light, $color-orange-dark);
+    border-bottom: 3px solid $color-orange;
+  }
+  &--orange-nt {
+    // @include gradient-font($color-orange-light, $color-orange-dark);
+    color: $color-orange;
+    text-shadow: 1px 2px 4px rgba($color-black, .5);
     border-bottom: 3px solid $color-orange;
   }
 }
@@ -421,8 +506,9 @@ a {
   }
   &-blue {
     color: $color-white;
-    background-image: linear-gradient(to bottom right, rgba(darken($color-aqua-blue-light, 25%), 0.4));
+    background-image: linear-gradient(to bottom right, rgba(darken($color-aqua-blue-light, 25%), 0.5), rgba($color-white, .3));
     background-color: $color-aqua-blue-dark;
+    font-weight: 600;
 
     &::after {
       background-color: $color-aqua-blue-dark;
@@ -538,12 +624,18 @@ a {
     max-width: 30rem;
     min-height: 30rem;
     box-shadow: 0 1.5rem 3rem rgba($color-black, .3);
-    border-radius: 1.5rem;
+    border-radius: 1.1rem;
     overflow: hidden;
     display: inline-block;
     background-color: $color-white;
     &:not(:last-child){
       margin-right: 1.5rem;
+    }
+    transition: all .3s ease-in-out;
+    &:hover {
+      transform: translateY(-3rem);
+      // box-shadow: 0 3px 1rem rgba($color-orange-dark, .5);
+      
     }
   }
   &__image {
@@ -616,7 +708,11 @@ a {
   margin: 0 auto;
   background-color: $color-gray-2;
   padding: 2rem;
-  background-image: linear-gradient(to bottom, rgba($color-aqua-blue-dark, .6), rgba($color-aqua-blue, .6));
+  background-image: 
+  linear-gradient(to bottom, rgba($color-aqua-blue-dark, .6),
+  rgba($color-aqua-blue, .6)),
+  url(@/assets/img/hero2.jpg);
+
   background-size: cover;
   background-position: center center;
   min-height: 95rem;
@@ -630,6 +726,12 @@ a {
   padding-bottom: 20rem;
 
 
+  &__card {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-image: linear-gradient(to bottom, rgba($color-white, .8), transparent);
+  }
 
   &__group {
     position: relative;
@@ -877,7 +979,11 @@ a {
         &:not(:last-child) {
           border-bottom: 1px solid $color-gray-2;
         }
+        &::first-letter {
+          text-transform: uppercase;
+        }
       }
+      
     }
     & p{
       font-size: $default-font;
@@ -963,6 +1069,7 @@ a {
   padding: 10rem 0;
   position: relative;
   display: block;
+  padding-bottom: 30rem;
 
   &__body {
     font-size: $default-font;
@@ -973,7 +1080,11 @@ a {
     width: 100%;
     display: block;
   }
-
+ 
+  p{
+    font-size: 2.2rem;
+    color: $color-white;
+  }
 }
 
 
@@ -1047,6 +1158,93 @@ a {
 
 
 
+.footer {
+  display: block;
+  position: relative;
+  margin-top: -15rem;
+  width: 100%;
+  background-color: $color-aqua-blue-dark;
+  clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+  height: 15rem;
+
+  &__body {
+    position: absolute;
+    @include absoluteCenter();
+    font-size: 2rem;
+  }
+}
+
+.copyright {
+  display: block;
+  text-align: center;
+}
+.withLove {
+  display: block;
+  text-align: center;
+}
+
+// Resume Styles
+.resume {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color-black, 0.8);
+  position: fixed;
+  color: $color-black;
+  font-size: $default-font;
+  z-index: 9000;
+
+  &__links {
+    position: absolute;
+    top: 0;
+    right:0;
+  }
+  &__close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 2.2rem;
+
+    & a:link, & a:active, & a:visited {
+      padding: 1rem;
+      width: 2.2rem;
+      height: 2.2rem;
+      text-align: center;
+      display: block;
+      background-image: linear-gradient(to bottom, rgba($color-white, .4), transparent);
+      background-color: rgb(218, 8, 8);
+      border-radius: 8px;
+      line-height: 1;
+      box-shadow: 0 2px 5px rgba($color-black, .4);
+    }
+    & a:hover {
+      color: $color-white;
+      text-decoration: none;
+      border-bottom: none;
+      // transform: translateY(-1px);
+      box-shadow: 0 2px 5px rgba(218, 8, 8, .7) 
+    }
+
+    &__header {
+      font-family: "Impact";
+      display: block;
+    }
+
+    &__body{
+      display: block;
+    }
+
+  }
+
+  &__modal {
+    @include absoluteCenter();
+    min-height: 90%;
+    width: 47%;
+    padding: 3rem 2rem;
+    background-color: #fff;
+    overflow-y: scroll;
+  }
+}
+
 
 .grow {
   display: inline-block;
@@ -1092,6 +1290,7 @@ a {
   }
 }
 
+
 // Vue Animations?
 
 .slide-fade-enter-active {
@@ -1110,15 +1309,15 @@ a {
 
 
 .fade-scale-enter-active{
-  transition: all 1.3s ease-out;
+  transition: all .5s ease-out;
 }
 .fade-scale-leave-active {
-  transition: all 1.3s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all .5s cubic-bezier(1, 0.5, 0.8, 1);
 }
 .fade-scale-enter-from,
 .fade-scale-leave-to {
 
-  transform: scale(0);
+  transform: scale(.5);
   opacity: 0;
 
 }
