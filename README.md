@@ -1,24 +1,17 @@
-# kriscartmell.com
+# Portfolio version 2.0
 
-## Project setup
+## Languages
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+VueJS, SCSS
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Purpose
+Version two (2.0) of my portfolio website was to push me out of my comfort zone and start meeting industry standards and requires.  I've pushed myself to start with an easier, but effective front end frame work (VueJS 3). 
+At this point, I figured I may as well expand my front end development skills and start using a css preprocessor, SCSS.
 
-### Lints and fixes files
-```
-npm run lint
-```
+Currently, as of this commit, there is no backend development planned for this website as I've shown my backend skills via my [Freelance](https://github.com/debuggingbytes/db_website_v2).
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Development Plans
+- State used more frequently for front end, to ensure a better UX
+- Responsive design for common breakpoints
+- VueX state management
