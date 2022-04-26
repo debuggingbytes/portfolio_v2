@@ -1,3 +1,5 @@
+
+
 .nav-bar {
   position: fixed;
   top: 0;
@@ -8,6 +10,8 @@
   width: 100%;
   max-height: 5rem;
   pointer-events: none;
+  z-index: 3000;
+
 
   &__logo {
     display: block;
@@ -19,9 +23,63 @@
   }
   &__links {
     display: block;
+
+    @include respond(phone){
+      display: none;
+      visibility: hidden;
+    }
   }
-  z-index: 3000;
+  &__mobile {
+    display: none;
+    visibility:hidden;
+    width: 5rem;
+    height: 5rem;
+    background-image: linear-gradient(rgba($color-white, .3) 30%, $color-gray-2);
+    background-color: rgb(17, 17, 17);
+    padding: .5rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 6px .5rem rgba($color-black, .5);
+    cursor: pointer;
+    z-index: 3001;
+
+    &--btn {
+      &::before {
+        display: inline-block;
+        height: 5px;
+        width: 32px;
+        background: $color-white;
+        content: '';
+        transform: translateY(-36px);
+      }
+      &::after {
+        display: inline-block;
+        height: 5px;
+        width: 32px;
+        background: $color-white;
+        content: '';
+        transform: translateY(-86px);
+      }
+      position: relative;
+      display: inline-block;
+      height: 5px;
+      width: 32px;
+      background: $color-white;
+      content: '';
+    }
+
+    @include respond(phone){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: visible;
+      font-size: 3rem;
+
+    }
+  }
 }
+
+
 .nav {
   &-links {
     display: inline-block;
@@ -52,6 +110,7 @@
         );
         padding-bottom: 0.5rem;
         border-bottom: $color-orange 0.5rem solid;
+        -webkit-background-clip: text;
         background-clip: text;
         transform: translateX(-10%);
         text-shadow: none;

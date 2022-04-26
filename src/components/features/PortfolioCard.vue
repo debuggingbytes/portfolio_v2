@@ -12,7 +12,7 @@
           </span>
         </h4>
         <div class="card__details">
-          <p class="card__details--info">{{project.details.info}}</p>
+          <p class="card__details--info txt-justify">{{project.details.info}}</p>
         </div>
       </div>
       <div class="card__side card__side--back card__side--back--1">

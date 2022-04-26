@@ -8,20 +8,31 @@
   background-image: 
   linear-gradient(to bottom, rgba($color-aqua-blue-dark, .6),
   rgba($color-aqua-blue, .6)),
-  url(@/assets/img/hero2.jpg);
+  url(/assets/img/hero2.jpg);
 
   background-size: cover;
   background-position: center center;
   min-height: 95rem;
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 10%, 100% 0, 100% 85%, 0 100%);
+  margin-top: 10rem;
+  padding-bottom: 20rem;
+
+
+  @include respond(desktop){
+    -webkit-clip-path: polygon(0 12rem, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 12rem, 100% 0, 100% 90%, 0 100%);
+    padding-bottom: 24rem;
+  }
+  
   @include respond(tab-land){
     -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
     clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
   }
-  margin-top: 10rem;
-  padding-bottom: 20rem;
-
+  @include respond(phone){
+    -webkit-clip-path: polygon(0 8rem, 100% 0, 100% 98%, 0 100%);
+    clip-path: polygon(0 8rem, 100% 0, 100% 98%, 0 100%);
+  }
 
   &__card {
     width: 100%;

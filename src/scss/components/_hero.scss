@@ -4,7 +4,7 @@
       rgba($color-black, 0.8) 80%,
       rgba($color-gray-3, 0.8)
     ),
-    url(@/assets/img/hero.jpg);
+    url(/assets/img/hero.jpg);
   background-size: cover;
   background-position: center top;
   background-color: $color-black; // fallback
@@ -14,4 +14,15 @@
   position: relative;
   color: $color-aqua-blue;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  
+  
+  @include respond(tab-land){
+    clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
+  }
+  @include respond(tab-port){
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
 }

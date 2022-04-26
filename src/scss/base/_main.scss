@@ -14,9 +14,10 @@
 html {
   // font-family: 'Impact';
   font-size: 62.5%; // 1 rem = 10px
+  scroll-behavior: smooth;
 }
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato, Verdana, Geneva, Tahoma, sans-serif;
   color: $color-white;
 }
 
@@ -37,5 +38,7 @@ body {
 .main {
   background-color: rgb(27, 27, 27);
   padding-top: 15rem;
-  margin-top: -7.5rem;
+  margin-top: -8.5rem;
+
+  // @include respond
 }

@@ -4,6 +4,7 @@
 .txt-center { text-align: center; }
 .txt-start { text-align: start; }
 .txt-end { text-align: end; }
+.txt-justify { text-align:justify; }
 
 // Font Styling
 .fw-md { font-weight: 400; }
@@ -35,12 +36,30 @@ a {
   font-weight: 600;
   display: block;
   padding: 2rem 0;
+  max-width: 100%;
+
+  
+  @include respond(tab-land){
+    font-size: 5rem;
+  }
+  @include respond(tab-port){
+    font-size: 4rem;
+  }
+  @include respond(phone){
+    font-size: 4.6rem;
+  }
+  @include respond(phone-xs){
+    font-size: 3.6rem;
+  }
 
   &--sm {
     color: $color-white;
     font-size: 2rem;
     display: block;
     padding: 2rem 0;
+    @include respond(phone){
+      text-align: center;
+    }
   }
 }
 .h2 {

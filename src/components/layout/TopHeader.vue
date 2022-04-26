@@ -38,6 +38,9 @@
           <li class="nav-link"><a href='#resume' @click.prevent="this.$emit('event')" class="nav-link__link">resume</a></li>
         </ul>
       </div>
+      <div class="nav-bar__mobile">
+        <span @click.prevent="" class="nav-bar__mobile--btn">&nbsp;</span>
+      </div>
     </nav>
   </header>
 </template>

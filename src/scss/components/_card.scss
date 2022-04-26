@@ -71,7 +71,7 @@
           $color-orange-light,
           $color-orange-dark
         ),
-        url(@/assets/img/hero.jpg)
+        url(/assets/img/hero.jpg)
         ;
     }
     &--2 {
@@ -213,7 +213,10 @@
       transform: rotateY(0);
     }
     &__details {
-      padding: 0 1rem;
+      padding: 7rem 0;
+      p {
+        padding: 0 1.4rem;
+      }
     }
 
     // BACKSIDE STYLING
@@ -223,7 +226,7 @@
       left: 0;
       transform: translate(0);
       width: 100%;
-      padding: 7rem 4rem 4rem 4rem;
+      padding: 7rem 2rem 3rem 0rem;
     }
     &__price-box {
       margin-bottom: 3rem;

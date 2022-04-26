@@ -9,7 +9,7 @@
           <p class="content pb-sm">
             I am a <span class="highlight">full stack</span> developer with a
             passion for thinking outside the box and learning the latest
-            languages and frameworks. I started learning to code back in 2000, completely self-taught through trial and error, and have since refined my skills through various <a href='#' @click.prevent="toggleBootcamp" class="highlight" :class="bootcampVisible ? '': 'grow'">Bootcamps</a>.
+            languages and frameworks. I started learning to code back in 2000, completely self-taught through trial and error, and have since refined my skills through various <a href='#bootcamps' @click="toggleBootcamp" class="highlight" :class="bootcampVisible ? '': 'grow'">Bootcamps</a>.
           </p>
           <p class="content">
             Fast forward {{ years }} years, I now have my own free lance
@@ -27,11 +27,13 @@
           </div>
         </div>
       </div>
+      <div id="bootcamps">
         <Transition name="slide-fade" appear>
         <div class="row pt-md" v-if="bootcampVisible">
             <Bootcamp :courses="data.bootcamps" :bootcamp="toggleBootcamp"/>
         </div>
        </Transition>
+      </div>
     </section>
     <PortfolioView :portfolio="data.portfolio" />
     <Transition name="fade-scale">
