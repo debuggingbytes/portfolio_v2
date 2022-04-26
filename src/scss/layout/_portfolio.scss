@@ -1,0 +1,52 @@
+// PORTFOLIO STYLES
+.portfolio {
+  // display: block;
+  position: relative;
+  margin: 0 auto;
+  background-color: $color-gray-2;
+  padding: 2rem;
+  background-image: 
+  linear-gradient(to bottom, rgba($color-aqua-blue-dark, .6),
+  rgba($color-aqua-blue, .6)),
+  url(@/assets/img/hero2.jpg);
+
+  background-size: cover;
+  background-position: center center;
+  min-height: 95rem;
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 10%, 100% 0, 100% 85%, 0 100%);
+  @include respond(tab-land){
+    -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+  }
+  margin-top: 10rem;
+  padding-bottom: 20rem;
+
+
+  &__card {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-image: linear-gradient(to bottom, rgba($color-white, .8), transparent);
+  }
+
+  &__group {
+    position: relative;
+    padding-top: 15rem;
+    min-height: 20rem;
+
+  }
+  &__header {
+    width: 85%;
+    margin: 0 auto;
+    padding: 2rem;
+    // background-color: rgba($color-white, .3);
+    // padding: 2rem;
+    border-radius: 1rem;
+  }
+  &--text {
+    color: $color-black;
+    font-size: $default-font;
+
+  }
+}

@@ -1,0 +1,114 @@
+//  Button Styles
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+    // Change for button element
+
+    border: none;
+    cursor: pointer;
+  }
+  //HOVER & NESTING
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2); /* X, Y, BLURR, COLOUR*/
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  // ENd hOVER AND NESTING
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2); /* X, Y, BLURR, COLOUR   Gives button a "depressed" look */
+  }
+
+  &-orange {
+    color: $color-white;
+    background-image: linear-gradient(to bottom right, rgba($color-white, 0.4));
+    background-color: $color-orange;
+
+    &::after {
+      background-color: $color-orange;
+    }
+  }
+
+  &-white {
+    color: $color-orange;
+    background-image: linear-gradient(to bottom right, rgba(darken($color-white, 25%), 0.4));
+    background-color: $color-white;
+
+    &::after {
+      background-color: $color-white;
+    }
+
+  }
+  &-blue {
+    color: $color-white;
+    background-image: linear-gradient(to bottom right, rgba(darken($color-aqua-blue-light, 25%), 0.5), rgba($color-white, .3));
+    background-color: $color-aqua-blue-dark;
+    font-weight: 600;
+
+    &::after {
+      background-color: $color-aqua-blue-dark;
+    }
+  }
+
+  &::after {
+    /* hidden element behind button */
+
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s; /* Transition has to be on Initial State  */
+  }
+
+  &-social {
+  
+    &,
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 2px 4px;
+      display: inline-block;
+      height: 10px;
+      border-radius: 3px;
+      transition: all 0.2s;
+      position: relative;
+      font-size: 5rem;
+      // Change for button element
+
+      border: none;
+      cursor: pointer;
+    }
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1px 2px rgba($color-black, 0.2); /* X, Y, BLURR, COLOUR*/
+  
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  }
+}

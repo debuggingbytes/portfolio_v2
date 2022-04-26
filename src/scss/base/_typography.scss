@@ -1,0 +1,94 @@
+// Text Utilities
+
+// txt align
+.txt-center { text-align: center; }
+.txt-start { text-align: start; }
+.txt-end { text-align: end; }
+
+// Font Styling
+.fw-md { font-weight: 400; }
+.fw-lg { font-weight: 600; }
+.fw-xl { font-weight: 700; }
+
+.highlight { color: $color-aqua-blue; font-weight: 600; }
+
+a {
+  color: inherit;
+  &:link, &:visited, &:active{
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .3s ease-in-out;
+    // text-transform: uppercase;
+  } 
+  &:hover{
+    padding-bottom: 2px;
+    border-bottom:$color-aqua-blue-dark 3px solid;
+
+  }
+}
+
+
+
+// Head
+.h1 {
+  font-size: 6rem;
+  font-weight: 600;
+  display: block;
+  padding: 2rem 0;
+
+  &--sm {
+    color: $color-white;
+    font-size: 2rem;
+    display: block;
+    padding: 2rem 0;
+  }
+}
+.h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+
+  &--blue {
+    @include gradient-font($color-aqua-blue-light, $color-aqua-blue-dark);
+    border-bottom: 3px solid $color-aqua-blue;
+  }
+  &--orange {
+    @include gradient-font($color-orange-light, $color-orange-dark);
+    border-bottom: 3px solid $color-orange;
+  }
+  &--orange-nt {
+    // @include gradient-font($color-orange-light, $color-orange-dark);
+    color: $color-orange;
+    text-shadow: 1px 2px 4px rgba($color-black, .5);
+    border-bottom: 3px solid $color-orange;
+  }
+}
+
+.h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+
+  &--blue {
+    @include gradient-font($color-aqua-blue-light, $color-aqua-blue-dark);
+    border-bottom: 3px solid $color-aqua-blue;
+  }
+  &--orange {
+    @include gradient-font($color-orange-light, $color-orange-dark);
+    border-bottom: 3px solid $color-orange;
+  }
+  &--orange-nt {
+    // @include gradient-font($color-orange-light, $color-orange-dark);
+    color: $color-orange;
+    text-shadow: 1px 2px 4px rgba($color-black, .5);
+    border-bottom: 3px solid $color-orange;
+  }
+}

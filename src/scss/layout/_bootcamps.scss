@@ -1,0 +1,91 @@
+.bootcamp {
+  font-size: $default-font;
+  // opacity: 0;
+  // animation: fadeIn 2s;
+  transition: all .4s;
+
+
+  &__card {
+    position: relative;
+    width: 24%;
+    // padding: 1.5rem;
+    margin-top: 2.5rem;
+    max-width: 30rem;
+    min-height: 30rem;
+    box-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+    border-radius: 1.1rem;
+    overflow: hidden;
+    display: inline-block;
+    background-color: $color-white;
+    &:not(:last-child){
+      margin-right: 1.5rem;
+    }
+    transition: all .3s ease-in-out;
+    &:hover {
+      transform: translateY(-3rem);
+      // box-shadow: 0 3px 1rem rgba($color-orange-dark, .5);
+      
+    }
+  }
+  &__image {
+    position: relative;
+    height: 15rem;
+    display: block;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-aqua-blue-dark, .45),
+      rgba($color-aqua-blue-light, .45)
+    ),
+        url(@/assets/img/hero.jpg)
+        ;
+    background-size: cover;
+    background-position: center center;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+  &__heading {
+    font-size: 1.5rem;
+    color: $color-white;
+    padding: 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    position: absolute;
+    bottom: 2rem;
+    right: .5rem;
+    text-align: right;
+    text-shadow: 1px 1px 3px rgba($color-black, 0.4);
+  }
+  &__body {
+    display: block;
+    padding: 1.5rem;
+    width: 95%;
+    margin: 0 auto;
+    color: $color-black;
+    font-size: 1.5rem;
+
+  }
+  &__footer {
+    display: block;
+    height: 3rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-aqua-blue-dark, .45),
+      rgba($color-aqua-blue-light, .45)
+    );
+    content: '';
+    padding-bottom: 1.4rem;
+    &--text {
+      padding: 1rem;
+      text-align: center;
+      font-weight: 600;
+      text-shadow: 1px 1px 3px rgba($color-black, 0.4);
+
+    }
+
+  }
+
+}

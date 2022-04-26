@@ -1,0 +1,26 @@
+.socialBar {
+  width: auto;
+  height: 10rem;
+  position: fixed;
+  bottom: 5%;
+  left: 3%;
+
+  &__vertical {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 10rem;
+    background-color: rgba($color-aqua-blue, .5);
+  }
+
+  &__show {
+    position: absolute;
+    bottom: -40%;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+}

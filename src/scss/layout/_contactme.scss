@@ -1,0 +1,22 @@
+.contact-me {
+  
+  padding: 10rem 0;
+  position: relative;
+  display: block;
+  padding-bottom: 30rem;
+
+  &__body {
+    font-size: $default-font;
+
+  }
+
+  &__form {
+    width: 100%;
+    display: block;
+  }
+ 
+  p{
+    font-size: 2.2rem;
+    color: $color-white;
+  }
+}

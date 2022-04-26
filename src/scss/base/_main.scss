@@ -1,0 +1,41 @@
+/*
+
+  Base SCSS Files
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  // font-family: 'Impact';
+  font-size: 62.5%; // 1 rem = 10px
+}
+body {
+  font-family: 'Lato', sans-serif;
+  color: $color-white;
+}
+
+.content {
+  font-size: $default-font;
+  line-height: 2.4rem;
+
+  &-block {
+    display: block;
+  }
+  &-inline {
+    display: inline-block;
+    width: 15%;
+    font-weight: 600;
+  }
+}
+
+.main {
+  background-color: rgb(27, 27, 27);
+  padding-top: 15rem;
+  margin-top: -7.5rem;
+}

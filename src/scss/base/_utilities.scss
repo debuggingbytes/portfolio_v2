@@ -1,0 +1,79 @@
+/*
+
+  Utilities base classes
+
+*/
+
+
+// UTILITIES
+
+// Flex utilities
+.flex { display: flex; }
+.flex-box { display: flexbox; }
+.space-between { justify-content: space-between; }
+.space-evenly { justify-content: space-evenly; }
+.space-center { justify-content: center; }
+
+.align-center { align-items: center; }
+.align-start { align-items: flex-start; }
+.align-end { align-items: flex-end; }
+
+
+
+// Margins & Padding
+// Bottom padding
+.pb-xs { padding-bottom: 1rem; }
+.pb-sm { padding-bottom: 2rem; }
+.pb-md { padding-bottom: 4rem; }
+.pb-lg { padding-bottom: 6rem }
+
+// Top Padding
+.pt-xs { padding-top: 1rem; }
+.pt-sm { padding-top: 2rem; }
+.pt-md { padding-top: 4rem; }
+.pt-lg { padding-top: 6rem; }
+
+// X Padding
+.px-xs { padding: 1rem 0; }
+.px-sm { padding: 2rem 0; }
+.px-md { padding: 4rem 0; }
+.px-lg { padding: 6rem 0; }
+// Y Padding
+.py-xs { padding: 0 1rem; }
+.py-sm { padding: 0 2rem; }
+.py-md { padding: 0 4rem; }
+.py-lg { padding: 0 6rem; }
+
+
+
+// Bottom Margin
+.mb-xs { margin-bottom: 1rem; }
+.mb-sm { margin-bottom: 2rem; }
+.mb-md { margin-bottom: 4rem; }
+.mb-lg { margin-bottom: 6rem }
+
+// Top Padding
+.mt-xs { margin-top: 1rem; }
+.mt-sm { margin-top: 2rem; }
+.mt-md { margin-top: 4rem; }
+.mt-lg { margin-top: 6rem; }
+
+// X Padding
+.mx-xs { margin: 1rem 0; }
+.mx-sm { margin: 2rem 0; }
+.mx-md { margin: 4rem 0; }
+.mx-lg { margin: 6rem 0; }
+// Y Padding
+.my-xs { margin: 0 1rem; }
+.my-sm { margin: 0 2rem; }
+.my-md { margin: 0 4rem; }
+.my-lg { margin: 0 6rem; }
+
+.copyright {
+  display: block;
+  text-align: center;
+}
+.withLove {
+  display: block;
+  text-align: center;
+}
