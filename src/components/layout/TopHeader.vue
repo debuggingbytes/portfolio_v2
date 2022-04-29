@@ -35,12 +35,18 @@
           <li class="nav-link"><a href='' class="nav-link__link">Home</a></li>
           <li class="nav-link"><a href='' class="nav-link__link">ABout</a></li>
           <li class="nav-link"><a href='' class="nav-link__link">Portfolio</a></li>
+          <li class="nav-link"><a href='' class="nav-link__link">Contact</a></li>
           <li class="nav-link"><a href='#resume' @click.prevent="this.$emit('event')" class="nav-link__link">resume</a></li>
         </ul>
       </div>
-      <div class="nav-bar__mobile">
-        <span @click.prevent="" class="nav-bar__mobile--btn">&nbsp;</span>
-      </div>
+      <form>
+        <input  type="checkbox" id="mobileNav" name="mobileNav" class="nav-bar__mobile--check">
+        <label for="mobileNav" class="mobile__nav--label">
+          <div class="nav-bar__mobile">
+            <span class="nav-bar__mobile--btn">&nbsp;</span>
+          </div>
+        </label>
+      </form>
     </nav>
   </header>
 </template>

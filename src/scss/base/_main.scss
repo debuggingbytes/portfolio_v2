@@ -38,7 +38,11 @@ body {
 .main {
   background-color: rgb(27, 27, 27);
   padding-top: 15rem;
-  margin-top: -8.5rem;
+  margin-top: -13.5rem;
+
+  @include respond(tab-land){
+    margin-top: -8.5rem;
+  }
 
   // @include respond
 }

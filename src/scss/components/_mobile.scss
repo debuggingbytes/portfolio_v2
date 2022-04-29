@@ -1,0 +1,57 @@
+// Styling for mobile nav bar
+.mobile {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 2999;
+  color: $color-black;
+  background: rgba($color-black, .9);
+
+
+  &__nav {
+    @include absoluteCenter();
+    width: 80%;
+    height: 75vh;
+    border: 3px solid #f0f;
+    padding: 1.5rem;
+    color: $color-aqua-blue;
+
+    &--links  {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+    }
+    &--link {
+      list-style: none;
+      font-size: 4rem;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding-bottom: 1.5rem;
+    }
+
+    &--label {
+      z-index: 119000;
+      pointer-events: all;
+      display: block;
+    }
+    
+   
+  }
+
+  &__logo {
+    display: block;
+    height: 10rem;
+    width: 100%;
+
+    &--img {
+      display: block;
+      max-width: 30%;
+      margin: auto;
+
+    }
+
+
+  }
+
+}

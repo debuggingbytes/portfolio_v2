@@ -16,6 +16,9 @@
   &__logo {
     display: block;
     max-width: 30%;
+    @include respond(phone){
+      visibility: hidden;
+    }
   }
   &__img {
     max-height: 80%;
@@ -32,8 +35,8 @@
   &__mobile {
     display: none;
     visibility:hidden;
-    width: 5rem;
-    height: 5rem;
+    width: 4.5rem;
+    height: 4.5rem;
     background-image: linear-gradient(rgba($color-white, .3) 30%, $color-gray-2);
     background-color: rgb(17, 17, 17);
     padding: .5rem;
@@ -41,7 +44,9 @@
     border-radius: 5px;
     box-shadow: 1px 6px .5rem rgba($color-black, .5);
     cursor: pointer;
-    z-index: 3001;
+    z-index: 4000;
+
+    
 
     &--btn {
       &::before {
@@ -66,7 +71,10 @@
       width: 32px;
       background: $color-white;
       content: '';
+      pointer-events: all;
     }
+    
+    
 
     @include respond(phone){
       display: flex;

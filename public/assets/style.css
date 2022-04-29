@@ -47,7 +47,10 @@ body {
 .main {
   background-color: #1b1b1b;
   padding-top: 15rem;
-  margin-top: -8.5rem; }
+  margin-top: -13.5rem; }
+  @media (max-width: 75em) {
+    .main {
+      margin-top: -8.5rem; } }
 
 .txt-center {
   text-align: center; }
@@ -780,6 +783,47 @@ a {
   background-image: rgba(0, 0, 0, 0.8);
   color: #fff; }
 
+.mobile {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 2999;
+  color: #000;
+  background: rgba(0, 0, 0, 0.9); }
+  .mobile__nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 75vh;
+    border: 3px solid #f0f;
+    padding: 1.5rem;
+    color: #09d4d9; }
+    .mobile__nav--links {
+      display: block;
+      width: 80%;
+      margin: 0 auto; }
+    .mobile__nav--link {
+      list-style: none;
+      font-size: 4rem;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding-bottom: 1.5rem; }
+    .mobile__nav--label {
+      z-index: 119000;
+      pointer-events: all;
+      display: block; }
+  .mobile__logo {
+    display: block;
+    height: 10rem;
+    width: 100%; }
+    .mobile__logo--img {
+      display: block;
+      max-width: 30%;
+      margin: auto; }
+
 .about {
   position: relative;
   padding: 8rem 0;
@@ -908,6 +952,9 @@ a {
   .nav-bar__logo {
     display: block;
     max-width: 30%; }
+    @media (max-width: 37.5em) {
+      .nav-bar__logo {
+        visibility: hidden; } }
   .nav-bar__img {
     max-height: 80%;
     padding-left: 1.7rem; }
@@ -920,8 +967,8 @@ a {
   .nav-bar__mobile {
     display: none;
     visibility: hidden;
-    width: 5rem;
-    height: 5rem;
+    width: 4.5rem;
+    height: 4.5rem;
     background-image: linear-gradient(rgba(255, 255, 255, 0.3) 30%, #333);
     background-color: #111111;
     padding: .5rem;
@@ -929,14 +976,15 @@ a {
     border-radius: 5px;
     box-shadow: 1px 6px 0.5rem rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    z-index: 3001; }
+    z-index: 4000; }
     .nav-bar__mobile--btn {
       position: relative;
       display: inline-block;
       height: 5px;
       width: 32px;
       background: #fff;
-      content: ''; }
+      content: '';
+      pointer-events: all; }
       .nav-bar__mobile--btn::before {
         display: inline-block;
         height: 5px;
