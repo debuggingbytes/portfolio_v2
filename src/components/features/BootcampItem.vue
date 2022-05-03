@@ -2,7 +2,7 @@
   <div class="bootcamp">
     <h2 class="h2 h2--blue">Bootcamps</h2>
     <p class="pt-md">To keep up with the latest best practices, frameworks and stacks, Bootcamps felt like the best option.  With no real technical training, I was being over looked by potential employers. So I took the steps to enroll in <a class='highlight'>Udemy</a> bootcamps to give myself certificates and credentials to show future employers. I am proud to say I have greatly increased my frontend development skills.</p>
-    <p class='pt-sm'>Below is the current list of completed bootcamps.
+    <p class='pt-sm pb-md'>Below is the current list of completed bootcamps.
     </p>
     
     <div class="bootcamp__card" v-for="course in courses" :key="course.id">

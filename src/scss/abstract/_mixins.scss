@@ -44,7 +44,12 @@
   // Dont use pixels, use a responsive design method
   // use EM for responsive design, based off users font size (browser)
   // 1 EM = 16px
-
+  @if $breakpoint == phone-xxs {
+    @media (max-width: 18em) {
+      // 430px
+      @content;
+    }
+  }
   @if $breakpoint == phone-xs {
     @media (max-width: 26.875em) {
       // 430px

@@ -6,15 +6,21 @@
   z-index: 2999;
   color: $color-black;
   background: rgba($color-black, .9);
+  display: block;
+  pointer-events: all;
+  top: 0;
+  left: 0;
+
 
 
   &__nav {
     @include absoluteCenter();
     width: 80%;
     height: 75vh;
-    border: 3px solid #f0f;
+    // border: 3px solid #f0f;
     padding: 1.5rem;
     color: $color-aqua-blue;
+    z-index: 9090909090;
 
     &--links  {
       display: block;

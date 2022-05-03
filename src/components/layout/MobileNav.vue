@@ -1,6 +1,7 @@
 <template>
-  <!-- Mobile container - components-mobile.scss -->
   <div class="mobile">
+  <!-- Mobile container - components-mobile.scss -->
+
     <!-- Mobile navbar -->
     <div class="mobile__nav">
       <div class="mobile__logo mb-md">

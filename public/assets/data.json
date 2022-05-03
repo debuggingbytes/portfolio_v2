@@ -54,29 +54,26 @@
     {
       "id": 1,
       "name": "2021 Web Development",
-      "details": "Fundamentals of said described course with amazing content and teachers",
+      "details": "Refresher course for new HTML5 & CSS3 elements, included some React, Node, Express etc.",
       "certificate": ""
     },
     {
       "id": 2,
       "name": "Tailwind CSS",
-      "details": "Fundamentals of said described course with amazing content and teachers",
+      "details": "Full TailwindCSS course including all functionality.",
       "certificate": ""
-
     },
     {
       "id": 3,
       "name": "Laravel",
-      "details": "Fundamentals of said described course with amazing content and teachers",
+      "details": "Breakdown of how laravel using MVC, Blade templating, naming conventions and more.",
       "certificate": ""
-
     },
     {
       "id": 3,
       "name": "Advanced CSS & SASS",
-      "details": "Fundamentals of said described course with amazing content and teachers",
+      "details": "CSS animations, advanced responsive design, flexbox, Grid, Sass, architexture and more.",
       "certificate": ""
-
     }
   ],
   "portfolio": [
@@ -84,7 +81,7 @@
       "id": 0,
       "name": "Debugging Bytes",
       "url": "https://www.debuggingbytes.com",
-      "img_url" : "",
+      "img_url": "",
       "details": {
         "stacks": ["laravel", "MySQL", "Bootstrap"],
         "info": "DebuggingBytes is my freelance website. The website is run with the Laravel backend, where clients have their own personal dashboard and login system to view and discuss changes made to the website."
@@ -96,7 +93,7 @@
       "id": 1,
       "name": "Portfolio v2",
       "url": "https://www.kriscartmell.com",
-      "img_url" : "",
+      "img_url": "",
       "details": {
         "stacks": ["VueJS", "SCSS"],
         "info": "This is the second version of my portfolio.  This version utilizes the VueJS framework and SCSS for the front end. Revision 2 of this website was to push me out of my comfort zone and start developing with the latest stacks required in the industry."
@@ -108,19 +105,19 @@
       "id": 2,
       "name": "Hillside Equipment",
       "url": "http://www.hillsideequipment.com",
-      "img_url" : "",
+      "img_url": "",
       "details": {
-        "stacks": ["Laravel", "MySQL", "Bootstrap" ],
+        "stacks": ["Laravel", "MySQL", "Bootstrap"],
         "info": "Hillside Equipment was developed to provide the client an easy way to add and remove features, such as gallery options, or parts listings.  This website uses a Laravel & MySQL backend, utilizing bootstrap 5 on the front end."
       },
       "github": "",
       "demo": ""
-    },  
+    },
     {
       "id": 3,
       "name": "Alberta Crane Service Ltd",
       "url": "http://www.albertacraneservice.com",
-      "img_url" : "",
+      "img_url": "",
       "details": {
         "stacks": ["Vanilla PHP", "MySQL", "Bootstrap"],
         "info": "Alberta Crane Service wanted a simple website to show clients their inventory via a third parties API.  This website was developed using vanilla PHP and MySQL backend, with a bootstrap 4 frontend. This client has contacted me for a revision."
@@ -129,5 +126,4 @@
       "demo": ""
     }
   ]
-
 }

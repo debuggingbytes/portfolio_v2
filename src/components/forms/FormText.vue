@@ -1,6 +1,6 @@
 <template>
   <!-- {{message.length}} -->
-  <textarea @keyup="checkText" v-model="message" :class="css" :placeholder="placeholder" required no-resize>
+  <textarea @keyup="checkText" :id="forLabel" v-model="message" :class="css" :placeholder="placeholder" required no-resize>
 
   </textarea>
   <AlertBox css="alert alert-error" :alertMessage="error" v-if="tooLong"/>

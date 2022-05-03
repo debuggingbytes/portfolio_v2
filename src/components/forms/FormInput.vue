@@ -1,5 +1,5 @@
 <template>
-  <input id="{{forLabel}}" :type="type" :class="css" :placeholder="placeholder" required/>
+  <input :id="forLabel" :type="type" :class="css" :placeholder="placeholder" required/>
 </template>
 
 <script>

@@ -60,7 +60,9 @@ export default {
     // Label Props
     'label', 'forLabel',
     //passed methds
-    'contactFunction'
+    'contactFunction',
+    //Form Values
+    'inputValue'
     ],
   methods: {
     submitContact() {

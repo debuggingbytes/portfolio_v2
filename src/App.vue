@@ -1,16 +1,21 @@
 <template>
-  <Transition name="fade-scale">
-    <ResumeView v-if="resumeVisible" @event="resumeToggle" />
-  </Transition>
-  <Transition name="fade-scale">
-    <MobileNav v-if="mobileNavVisible" />
-  </Transition>
-  <TopHeader @event="resumeToggle" />
-  <router-view/>
-  <SocialBar/>
-  <FooterView />
+  <div>
+    <Transition name="fade-scale" key="0">
+      <div v-if="resumeVisible">
+       <ResumeView @event="resumeToggle" />
+      </div>
+    </Transition>
+    <Transition name="slide-left">
+      <div v-if="mobileNavVisible" style='z-index: 2998; position: relative;'>
+        <MobileNav/>
+      </div>
+    </Transition>
+    <TopHeader @event="resumeToggle" @navToggle="toggleMobileNav" />
+    <router-view/>
+    <SocialBar/>
+    <FooterView />
+  </div>
 </template>
-
 
 <script>
 import TopHeader from './components/layout/TopHeader'
@@ -19,17 +24,13 @@ import FooterView from '@/components/layout/FooterView'
 import ResumeView from '@/components/layout/ResumeView'
 import MobileNav from '@/components/layout/MobileNav'
 
-
-
-
-
 export default {
 
   data() {
     return {
       resumeVisible: false,
       navigationLinks: [],
-      mobileNavVisible: true,
+      mobileNavVisible: false,
     }
   },
 
@@ -39,7 +40,8 @@ export default {
       // console.log("working")
     },
     toggleMobileNav(){
-      this.moblileNavVisible = !this.mobileNavVisible
+      this.mobileNavVisible = !this.mobileNavVisible
+      // console.log("Working Mobile nav")
     }
   },
 

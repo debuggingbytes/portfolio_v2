@@ -73,3 +73,16 @@
   opacity: 0;
 
 }
+
+.slide-left-enter-active{
+  transition: all .5s ease-in-out;
+}
+.slide-left-leave-active {
+  transition: all .5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-left-enter-from,
+.slide-left-leave-to {
+
+  transform: translateX(200%)
+
+}
