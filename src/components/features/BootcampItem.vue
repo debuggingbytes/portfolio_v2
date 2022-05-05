@@ -11,6 +11,9 @@
       </div>
       <div class="bootcamp__body">
         {{course.details}}
+        <div class="bootcamp__link">
+          <a href="#" class="btn-sm btn-blue" target="_new">View course</a>
+        </div>
       </div>
       <div class="bootcamp__footer">
         <div class="bootcamp__footer--text">

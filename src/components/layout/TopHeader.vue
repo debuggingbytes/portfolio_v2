@@ -32,11 +32,11 @@
       </div>
       <div class="nav-bar__links">
         <ul class="nav-links">
-          <li class="nav-link"><a href='' class="nav-link__link">Home</a></li>
-          <li class="nav-link"><a href='' class="nav-link__link">ABout</a></li>
-          <li class="nav-link"><a href='' class="nav-link__link">Portfolio</a></li>
-          <li class="nav-link"><a href='' class="nav-link__link">Contact</a></li>
-          <li class="nav-link"><a href='#resume' @click.prevent="this.$emit('event')" class="nav-link__link">resume</a></li>
+          <li class="nav-link"><router-link to='/' class="nav-link__link">Home</router-link></li>
+          <li class="nav-link"><router-link to='/#about' class="nav-link__link">ABout</router-link></li>
+          <li class="nav-link"><router-link to='/#portfolio' class="nav-link__link">Portfolio</router-link></li>
+          <li class="nav-link"><router-link to='' class="nav-link__link">Contact</router-link></li>
+          <li class="nav-link"><router-link to='/resume/#resume' class="nav-link__link">resume</router-link></li>
         </ul>
       </div>
       <div class="nav-bar__mobile">

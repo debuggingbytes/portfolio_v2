@@ -26,7 +26,8 @@
             </div>
             
           </div>
-          <a href="#popup" class="btn btn-white">Book now</a>
+          <a :href="project.github" class="btn btn-white mx-sm">GitHub</a>
+          <a :href="link" class="btn btn-white  mx-sm">DEMO</a>
         </div>
       </div>
     </div>
@@ -40,9 +41,12 @@ export default {
   props: ['project'],
   data() {
     return {
+      link: '',
     }
   },
-  
+  created(){
+    this.project.demo ? this.link = this.project.demo : this.link = this.project.url
+  },
 
 }
 </script>

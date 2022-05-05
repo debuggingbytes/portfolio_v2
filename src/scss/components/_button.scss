@@ -116,3 +116,47 @@
     }
   }
 }
+
+
+
+// Smaller buttons
+.btn-sm {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.2rem 2.5rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.3rem;
+    @include respond(tab-port){
+      font-size: 1.3rem;
+      padding: 1rem 2rem;
+    }
+    // Change for button element
+    box-shadow: 1px 2px 4px rgba($color-black, .3);
+    border: none;
+    cursor: pointer;
+  }
+  //HOVER & NESTING
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2); /* X, Y, BLURR, COLOUR*/
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  // ENd hOVER AND NESTING
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2); /* X, Y, BLURR, COLOUR   Gives button a "depressed" look */
+  }
+}

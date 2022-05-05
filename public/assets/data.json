@@ -86,8 +86,8 @@
         "stacks": ["laravel", "MySQL", "Bootstrap"],
         "info": "DebuggingBytes is my freelance website. The website is run with the Laravel backend, where clients have their own personal dashboard and login system to view and discuss changes made to the website."
       },
-      "github": "",
-      "demo": ""
+      "github": "https://www.github.com/debuggingbytes",
+      "demo": "https://demo.debuggingbytes.com"
     },
     {
       "id": 1,
@@ -98,7 +98,7 @@
         "stacks": ["VueJS", "SCSS"],
         "info": "This is the second version of my portfolio.  This version utilizes the VueJS framework and SCSS for the front end. Revision 2 of this website was to push me out of my comfort zone and start developing with the latest stacks required in the industry."
       },
-      "github": "",
+      "github": "https://www.github.com/debuggingbytes",
       "demo": ""
     },
     {
@@ -110,7 +110,7 @@
         "stacks": ["Laravel", "MySQL", "Bootstrap"],
         "info": "Hillside Equipment was developed to provide the client an easy way to add and remove features, such as gallery options, or parts listings.  This website uses a Laravel & MySQL backend, utilizing bootstrap 5 on the front end."
       },
-      "github": "",
+      "github": "https://www.github.com/debuggingbytes",
       "demo": ""
     },
     {
@@ -122,7 +122,7 @@
         "stacks": ["Vanilla PHP", "MySQL", "Bootstrap"],
         "info": "Alberta Crane Service wanted a simple website to show clients their inventory via a third parties API.  This website was developed using vanilla PHP and MySQL backend, with a bootstrap 4 frontend. This client has contacted me for a revision."
       },
-      "github": "",
+      "github": "https://www.github.com/debuggingbytes",
       "demo": ""
     }
   ]

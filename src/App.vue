@@ -2,7 +2,7 @@
   <div>
     <Transition name="fade-scale" key="0">
       <div v-if="resumeVisible">
-       <ResumeView @event="resumeToggle" />
+       <!-- <ResumeView @event="resumeToggle" /> -->
       </div>
     </Transition>
     <Transition name="slide-left">
@@ -11,7 +11,9 @@
       </div>
     </Transition>
     <TopHeader @event="resumeToggle" @navToggle="toggleMobileNav" />
-    <router-view/>
+    <Transition name="slide-left">
+      <router-view/>
+    </Transition>
     <SocialBar/>
     <FooterView />
   </div>
@@ -21,7 +23,7 @@
 import TopHeader from './components/layout/TopHeader'
 import SocialBar from '@/components/layout/SocialBar'
 import FooterView from '@/components/layout/FooterView'
-import ResumeView from '@/components/layout/ResumeView'
+// import ResumeView from '@/components/layout/ResumeView'
 import MobileNav from '@/components/layout/MobileNav'
 
 export default {
@@ -49,7 +51,7 @@ export default {
     TopHeader,
     SocialBar,
     FooterView,
-    ResumeView,
+    // ResumeView,
     MobileNav,
   }
 
