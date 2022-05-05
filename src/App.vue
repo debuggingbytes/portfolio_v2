@@ -2,7 +2,7 @@
   <div>
     <Transition name="fade-scale" key="0">
       <div v-if="resumeVisible">
-       <!-- <ResumeView @event="resumeToggle" /> -->
+       <!-- <ResumeView @event="resumeToggle" />git  -->
       </div>
     </Transition>
     <Transition name="slide-left">
